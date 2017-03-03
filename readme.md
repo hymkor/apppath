@@ -32,3 +32,12 @@ is substituted to :
 ```
 
 We need not to run the heavy batchfile vcvarsall.bat so-called "Visual Studio Command Prompt."
+
+Misc.
+----
+
+`apppath.exe` is same as:
+
+```
+for /F "skip=2 tokens=2*" %%I in ('reg query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\%1" /ve') do echo %%J
+```
